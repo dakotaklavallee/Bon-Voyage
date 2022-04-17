@@ -98,7 +98,7 @@ export default function ResultPage({
                   ? barPhoto
                   : night.restaurant === "Greek"
                   ? greekPhoto
-                  : null
+                  : muricanPhoto
               }
               className="card-img-top"
               alt="Restaurant"
@@ -192,7 +192,7 @@ export default function ResultPage({
                   ? museumPhoto
                   : night.adventure === "Adventure"
                   ? coolPlacePhoto
-                  : null
+                  : parkPhoto
               }
               className="card-img-top"
               alt="..."

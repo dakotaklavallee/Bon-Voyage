@@ -10,39 +10,12 @@ import { getDistance } from "geolib";
 const axios = require('axios');
 
 function App() {
-  const restuarantChoices = [
-    "Chinese",
-    "Mexican",
-    "Italian",
-    "Indian",
-    "Pizza",
-    "American Grill",
-    "BBQ",
-    "Pub Food",
-    "Greek",
-  ];
-  const barChoices = ["Irish Pub", "Bar", "English Pub"];
-  const coffeeChoices = ["Coffee Shop", "Tea", "Juice"];
-  const exploreChoices = [
-    "Park",
-    "Concerts",
-    "Bowling",
-    "Theatre",
-    "Garden",
-    "Art",
-    "Museum",
-    "Adventure",
-  ];
-
-  const makeRandomSelection = (arr) => {
-    return arr[Math.floor(Math.random() * arr.length)];
-  };
 
   const initialNightSelection = {
-    restaurant: makeRandomSelection(restuarantChoices),
-    drinks: makeRandomSelection(barChoices),
-    coffeeOrTea: makeRandomSelection(coffeeChoices),
-    adventure: makeRandomSelection(exploreChoices),
+    restaurant: "restaurant",
+    drinks: "bar",
+    coffeeOrTea: "coffee",
+    adventure: "park",
   };
 
   const navigate = useNavigate();
@@ -511,6 +484,12 @@ function App() {
     return () => ac.abort();
   };
 
+  const handleRandomizer = async () => {
+    setNight(initialNightSelection);
+    setTimeout(() => setLoading(false), 5000);
+    await handleSubmit();
+  }
+
   const resultTrigger = () => {
     console.log("result obtained");
     if (window.confirm("See Results?")) {
@@ -528,7 +507,7 @@ function App() {
           <Route exact path="/" element={<HomePage />} />
           <Route
             path="/start"
-            element={<StartPage />}
+            element={<StartPage handleRandomizer={handleRandomizer} />}
           />
           <Route
             path="/start/options"
