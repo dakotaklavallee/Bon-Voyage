@@ -19,22 +19,22 @@ Views of different functions can be seen below:
 
 # Home Page
 
-![Home Page](https://i.imgur.com/frY9TLX.jpg)
+![Home Page](https://i.imgur.com/Fs40ttC.jpg)
 
 # Start Screen
 
-![Start Screen](https://i.imgur.com/1iwV1MD.jpg)
+![Start Screen](https://i.imgur.com/dRdAUxh.jpg)
 
 # Options Page + Submit Page
 
-![Options Page](https://i.imgur.com/xFELPFY.png)
+![Options Page](https://i.imgur.com/DIM5aSD.jpg)
 
-![Submission Page](https://i.imgur.com/IkeyGk3.png)
+![Submission Page](https://i.imgur.com/zLhgQ0P.jpg)
 
 # Fetching Results Page
 
-![Fetching Results](https://i.imgur.com/DPNjqUQ.png)
+![Fetching Results](https://i.imgur.com/JhEdZqD.jpg)
 
 # Results Display Page
 
-![Results Page](https://i.imgur.com/YWSYE5Q.png)
+![Results Page](https://i.imgur.com/9aCmo3o.jpg)
