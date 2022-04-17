@@ -1,0 +1,9 @@
+.myLogo{
+    display: flex;
+    width: 10%;
+    transition: all 0.5s;
+}
+
+.myLogo:hover{
+    opacity: 70%;
+}
