@@ -60,7 +60,27 @@ function App() {
     }
     getLocation();
     return () => abortControl.abort();
-  });
+  },[]);
+
+  useEffect(() => {
+    async function wakeUp(){
+      try{
+        const options = {
+          method: "GET",
+          url: `${process.env.REACT_APP_SERVER_URL}`
+        }
+        const response = await axios.request(options);
+        console.log('Server Now Awake');
+      }catch(error){
+        if (error.type === "AbortError") {
+          console.log("Aborted Restaurant Fetch");
+        } else {
+          console.log(error);
+        }
+      }
+    }
+    wakeUp();
+  },[])
 
   const questionsArray = [
     {
