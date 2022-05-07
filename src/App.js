@@ -70,7 +70,7 @@ function App() {
           url: `${process.env.REACT_APP_SERVER_URL}`
         }
         const response = await axios.request(options);
-        console.log('Server Now Awake');
+        console.log('Server Now Awake', response);
       }catch(error){
         if (error.type === "AbortError") {
           console.log("Aborted Restaurant Fetch");
